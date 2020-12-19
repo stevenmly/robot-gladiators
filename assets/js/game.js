@@ -3,15 +3,8 @@
 //    * Fight all enemy-robots
 //    * Defeat each enemy-robot
 // "LOSE" - Player robot's health is zero or less
-console.log(Math);
-// prints 3.141592653589793
-console.log(Math.PI);
 
- // rounds to the nearest whole number (4)
-console.log(Math.round(4.4));
-
- // prints the square root (5)
-console.log(Math.sqrt(25));
+/* GAME FUNCTIONS */
 
 var fightOrSkip = function() {
   //ask player if they'd like to fight or run
@@ -211,10 +204,16 @@ var randomNumber = function(min, max) {
 var getPlayerName = function() {
   var name = "";
 
-  while (name === "" || name == null) {
+  while (name === "" || name === null) {
     name = prompt("What is your robot's name?");
   }
+  console.log("Your robot's name is " + name);
+  return name;
 };
+
+/* END GAME FUNCTIONS */
+
+/* GAME INFORMATION / VARIABLES */
 
 var playerInfo = {
   name: getPlayerName(),
@@ -263,6 +262,8 @@ var enemyInfo = [
   }
 ];
 
-// start the game when the page loads
+/* END GAME INFORMATION / VARIABLES */
+
+/* RUN GAME */
 startGame();
     
